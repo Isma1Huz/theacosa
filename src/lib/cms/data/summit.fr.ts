@@ -1,0 +1,65 @@
+import type { SummitPage } from "../types";
+
+export const summitFr: SummitPage = {
+  heading: "Sommet ACOSA",
+  edition: "2ᵉ Sommet africain sur la sécurité des enfants en ligne 2025",
+  theme: "Autonomiser la génération numérique africaine : donner la priorité à la sécurité des enfants en ligne",
+  dates: "19–20 novembre 2025",
+  location: "Nairobi, Kenya",
+  images: [
+    { url: "https://theacosa.com/wp-content/uploads/2025/11/ACOSA-819x1024.jpg", alt: "Sommet africain sur la sécurité des enfants en ligne" },
+    { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Délégués lors d'un précédent sommet de l'ACOSA" },
+  ],
+  about: "À mesure que l'accès à Internet se développe à travers l'Afrique, les enfants et les jeunes sont plus connectés que jamais — ouvrant de nouvelles opportunités, mais les exposant aussi au cyberharcèlement, à l'exploitation, aux risques pour la vie privée et aux contenus nuisibles.",
+  legacyNote: "Le premier sommet, tenu en Éthiopie en 2024, a réuni des responsables de la protection de l'enfance de 10 pays, avec l'objectif d'étendre la participation à 20 pays africains lors des prochaines éditions.",
+  objectives: [
+    "Évaluer les progrès réalisés depuis le premier sommet",
+    "Mettre en valeur les politiques, outils et interventions de protection de l'enfance",
+    "Renforcer la collaboration entre les différentes parties prenantes",
+    "Élaborer des recommandations concrètes et des cadres de coopération régionale",
+  ],
+  audience: [
+    "Organisations et ONG de protection de l'enfance",
+    "Entreprises technologiques et de télécommunications",
+    "Décideurs politiques et régulateurs",
+    "Éducateurs et chercheurs",
+    "Défenseurs et chercheurs des droits numériques",
+  ],
+  activities: [
+    { icon: "launch", text: "Lancement de rapports, campagnes et recherches sur la sécurité des enfants en ligne" },
+    { icon: "roundtable", text: "Tables rondes sur les défis émergents et les bonnes pratiques" },
+    { icon: "panel", text: "Panels thématiques réunissant des experts de premier plan" },
+    { icon: "exhibition", text: "Expositions d'outils et de ressources innovants pour la sécurité numérique" },
+  ],
+  poster: {
+    eyebrow: "2ᵉ Sommet africain sur la sécurité des enfants en ligne 2025",
+    heading: "Un mouvement continental pour des enfants plus en sécurité en ligne",
+    body: "Délégués, responsables de la protection de l'enfance et partenaires technologiques venus de toute l'Afrique se sont réunis à Nairobi pour bâtir une réponse régionale partagée face aux risques en ligne auxquels les enfants sont exposés.",
+    images: [
+      { url: "https://theacosa.com/wp-content/uploads/2025/11/ACOSA-819x1024.jpg", alt: "Délégué au Sommet ACOSA" },
+      { url: "https://theacosa.com/wp-content/uploads/2025/01/A01A1395-scaled.jpg", alt: "L'équipe ACOSA lors du sommet fondateur" },
+      { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Délégués lors d'un précédent sommet de l'ACOSA" },
+    ],
+    supportedByLabel: "Soutenu par Meta, et en partenariat avec",
+    partners: [
+      "Ghana Internet Safety Foundation",
+      "ACSAI",
+      "LifeLine/ChildLine",
+      "Sema",
+      "Sustain Cameroon",
+      "Watoto Watch Network",
+      "Polaris Asso",
+      "Emmanuel Development Association",
+      "Halley Movement",
+    ],
+  },
+  contact: {
+    name: "Secrétaire Exécutive, ACOSA",
+    email: "lkariuki@theacosa.com",
+    ccEmail: "eadinkrah@theacosa.com",
+    website: "www.theacosa.com",
+    address: "Secrétariat de l'ACOSA, Ngong Hills Business Center, B.P. 535-00517, Nairobi, Kenya",
+    phone: "+254 701 077955",
+  },
+  cta: { label: "Impliquez-vous", href: "/contact" },
+};

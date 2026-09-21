@@ -1,0 +1,29 @@
+{
+  "ui": {
+    "skipToContent": "Aller au contenu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "switchLanguage": "Changer de langue",
+    "readMore": "Lire la suite",
+    "getInTouch": "Contactez-nous",
+    "getInvolved": "Impliquez-vous",
+    "submitMessage": "Envoyer le message",
+    "subscribe": "S'abonner",
+    "yourName": "Votre nom",
+    "yourEmail": "Votre e-mail",
+    "subject": "Objet",
+    "yourMessage": "Votre message",
+    "sending": "Envoi en cours…",
+    "sentSuccess": "Merci — votre message a bien été envoyé.",
+    "sentError": "Une erreur est survenue. Veuillez réessayer.",
+    "callUs": "Appelez-nous",
+    "emailUs": "Écrivez-nous",
+    "visitUs": "Rendez-nous visite",
+    "followUs": "Suivez-nous",
+    "quickLinks": "Liens rapides",
+    "findUs": "Nous trouver",
+    "newsletter": "Notre newsletter",
+    "allRightsReserved": "Tous droits réservés.",
+    "loading": "Chargement…"
+  }
+}

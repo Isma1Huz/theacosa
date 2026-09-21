@@ -1,0 +1,65 @@
+import type { SummitPage } from "../types";
+
+export const summitEn: SummitPage = {
+  heading: "ACOSA Summit",
+  edition: "2nd Africa Child Online Safety Summit 2025",
+  theme: "Empowering Africa's Digital Generation: Prioritizing Child Safety in the Online Space",
+  dates: "19–20 November 2025",
+  location: "Nairobi, Kenya",
+  images: [
+    { url: "https://theacosa.com/wp-content/uploads/2025/11/ACOSA-819x1024.jpg", alt: "Africa Child Online Safety Summit" },
+    { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Delegates at a previous ACOSA summit" },
+  ],
+  about: "As internet access expands across Africa, children and young people are more connected than ever — unlocking new opportunities, but also exposing them to cyberbullying, exploitation, privacy risks, and harmful content.",
+  legacyNote: "The inaugural 2024 Ethiopia Summit united child protection leaders from 10 countries, with a goal of expanding participation to 20 African nations by future editions.",
+  objectives: [
+    "Assess progress made since the inaugural summit",
+    "Showcase policies, tools, and interventions for child protection",
+    "Strengthen multi-stakeholder collaboration",
+    "Develop actionable recommendations and regional cooperation frameworks",
+  ],
+  audience: [
+    "Child Protection Organizations & NGOs",
+    "Technology and Telecom Companies",
+    "Policymakers and Regulators",
+    "Educators and Researchers",
+    "Digital Rights Advocates and Researchers",
+  ],
+  activities: [
+    { icon: "launch", text: "Launch of child online safety reports, campaigns, and research" },
+    { icon: "roundtable", text: "Roundtable discussions on emerging challenges and best practices" },
+    { icon: "panel", text: "Thematic panel discussions featuring leading experts" },
+    { icon: "exhibition", text: "Exhibitions of innovative digital safety tools and resources" },
+  ],
+  poster: {
+    eyebrow: "2nd Africa Child Online Safety Summit 2025",
+    heading: "A continental movement for safer children online",
+    body: "Delegates, child-protection leaders, and technology partners from across Africa came together in Nairobi to shape a shared, regional response to online risks facing children.",
+    images: [
+      { url: "https://theacosa.com/wp-content/uploads/2025/11/ACOSA-819x1024.jpg", alt: "ACOSA Summit delegate" },
+      { url: "https://theacosa.com/wp-content/uploads/2025/01/A01A1395-scaled.jpg", alt: "ACOSA team at the founding summit" },
+      { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Delegates at a previous ACOSA summit" },
+    ],
+    supportedByLabel: "Supported by Meta, and in partnership with",
+    partners: [
+      "Ghana Internet Safety Foundation",
+      "ACSAI",
+      "LifeLine/ChildLine",
+      "Sema",
+      "Sustain Cameroon",
+      "Watoto Watch Network",
+      "Polaris Asso",
+      "Emmanuel Development Association",
+      "Halley Movement",
+    ],
+  },
+  contact: {
+    name: "Executive Secretary, ACOSA",
+    email: "lkariuki@theacosa.com",
+    ccEmail: "eadinkrah@theacosa.com",
+    website: "www.theacosa.com",
+    address: "ACOSA Secretariat, Ngong Hills Business Center, P.O. Box 535-00517, Nairobi, Kenya",
+    phone: "+254 701 077955",
+  },
+  cta: { label: "Get involved", href: "/contact" },
+};

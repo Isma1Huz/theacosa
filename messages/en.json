@@ -1,0 +1,29 @@
+{
+  "ui": {
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language",
+    "readMore": "Read more",
+    "getInTouch": "Get in touch",
+    "getInvolved": "Get involved",
+    "submitMessage": "Submit message",
+    "subscribe": "Subscribe",
+    "yourName": "Your name",
+    "yourEmail": "Your email",
+    "subject": "Subject",
+    "yourMessage": "Your message",
+    "sending": "Sending…",
+    "sentSuccess": "Thank you — your message has been sent.",
+    "sentError": "Something went wrong. Please try again.",
+    "callUs": "Call us",
+    "emailUs": "Email us",
+    "visitUs": "Visit us",
+    "followUs": "Follow us",
+    "quickLinks": "Quick links",
+    "findUs": "Find us",
+    "newsletter": "Our newsletter",
+    "allRightsReserved": "All rights reserved.",
+    "loading": "Loading…"
+  }
+}

@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  /* ACOSA brand tokens — edit here to re-theme the whole site.
+     Kept as plain CSS custom properties (not hardcoded Tailwind classes)
+     so a client rebrand only ever touches this one block. */
+  --color-navy: #0b2340;      /* primary dark background (hero, footer) */
+  --color-navy-light: #14345c;
+  --color-gold: #f2b705;      /* accent / CTA color */
+  --color-gold-dark: #d19d00;
+  --color-green: #1c7a4d;     /* secondary accent (ACOSA logo green) */
+  --color-cream: #fbf8f1;     /* section background alternate */
+  --color-ink: #10192b;       /* body text on light backgrounds */
+  --color-muted: #5b6472;
+
+  /* System font stack — no external font request at build or runtime.
+     Swap for next/font/google (e.g. Poppins/Inter) if the client wants a
+     custom typeface; every heading/body class already reads these two
+     variables, so that's a one-line change in this file plus the layout. */
+  --font-heading: ui-sans-serif, "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  --font-body: ui-sans-serif, "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+
+  --background: #ffffff;
+  --foreground: var(--color-ink);
+
+  --max-width: 1280px;
+  --section-y: clamp(3.5rem, 6vw, 6.5rem);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--color-navy);
+  --color-navy-light: var(--color-navy-light);
+  --color-gold: var(--color-gold);
+  --color-gold-dark: var(--color-gold-dark);
+  --color-green: var(--color-green);
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display, var(--font-sans));
+  letter-spacing: -0.01em;
+}
+
+/* Respect reduced-motion preferences globally; scroll-reveal components
+   also check this before animating (see components/motion/reveal.tsx). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.section-y {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+
+/* Custom focus style — replaces the browser's default blue outline on
+   links/buttons/inputs with a subtler gold ring that still meets
+   accessibility requirements (visible keyboard focus indicator), rather
+   than removing focus indication altogether. */
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

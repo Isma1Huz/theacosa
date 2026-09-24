@@ -1,14 +1,14 @@
 import type { SiteSettings } from "../types";
 
 export const siteSettingsFr: SiteSettings = {
-  siteName: "ACOSA — Alliance Africaine pour la Sécurité des Enfants en Ligne",
+  siteName: "ACOSA: Alliance Africaine pour la Sécurité des Enfants en Ligne",
   logo: {
     url: "https://theacosa.com/wp-content/uploads/2025/01/ACOSA-logo-1-4-1.png",
     alt: "Logo ACOSA",
   },
   logoFooter: {
     url: "/images/brand/acosa-logo-footer-white.png",
-    alt: "ACOSA — Alliance africaine pour la sécurité des enfants en ligne (logo)",
+    alt: "ACOSA: Alliance africaine pour la sécurité des enfants en ligne (logo)",
   },
   phone: "+254 701 077955",
   email: "info@theacosa.com",
@@ -22,7 +22,15 @@ export const siteSettingsFr: SiteSettings = {
     { label: "Accueil", href: "/" },
     { label: "À propos", href: "/about-us" },
     { label: "Nos actions", href: "/what-we-do" },
-    { label: "Sommet ACOSA", href: "/acosa-summit" },
+    {
+      label: "Sommet ACOSA",
+      href: "/acosa-summit",
+      children: [
+        { label: "Sommet 2027", href: "/acosa-summit" },
+        { label: "Sommet 2025", href: "/acosa-summit/2025" },
+        { label: "Sommet 2024", href: "/acosa-summit/2024" },
+      ],
+    },
     { label: "Contact", href: "/contact" },
   ],
   footer: {
@@ -36,6 +44,6 @@ export const siteSettingsFr: SiteSettings = {
       { label: "Sommet ACOSA", href: "/acosa-summit" },
       { label: "Contact", href: "/contact" },
     ],
-    copyright: `© ${new Date().getFullYear()} Tous droits réservés — ACOSA`,
+    copyright: `© ${new Date().getFullYear()} Tous droits réservés · ACOSA`,
   },
 };

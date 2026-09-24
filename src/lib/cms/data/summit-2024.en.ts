@@ -1,0 +1,65 @@
+import type { SummitPage } from "../types";
+
+export const summit2024En: SummitPage = {
+  heading: "ACOSA Summit",
+  edition: "1st Africa Child Online Protection Summit 2024",
+  theme: "Founding the African Child Online Safety Alliance",
+  dates: "November 2024",
+  location: "Addis Ababa, Ethiopia",
+  images: [
+    { url: "/images/summit/board-meeting.jpg", alt: "ACOSA founding delegates in a working session" },
+    { url: "/images/summit/large-group-photo.jpg", alt: "Delegates at the founding Africa Child Online Protection Summit" },
+  ],
+  about: "The inaugural Africa Child Online Protection Summit, organized by the Watoto Watch Network, brought together governments, civil society, educators, policymakers, and technology experts from across the continent to assess the state of child online protection and explore collaborative solutions, giving rise to the African Child Online Safety Alliance (ACOSA).",
+  legacyNote: "The 2024 Ethiopia Summit united child protection leaders from 10 countries, with a goal of expanding participation to 20 African nations by future editions.",
+  objectives: [
+    "Assess the state of child online protection across Africa",
+    "Examine child protection initiatives in Kenya, Namibia, Tanzania, Cameroon, Mauritius, South Africa, Ghana, and Nigeria",
+    "Found a coordinated regional alliance to tackle cyberbullying, sextortion, and exploitation",
+    "Lay the groundwork for future summit editions",
+  ],
+  audience: [
+    "Child Protection Organizations & NGOs",
+    "Technology and Telecom Companies",
+    "Policymakers and Regulators",
+    "Educators and Researchers",
+    "Digital Rights Advocates and Researchers",
+  ],
+  activities: [
+    { icon: "launch", text: "Founding of the African Child Online Safety Alliance" },
+    { icon: "roundtable", text: "Roundtable discussions on cyberbullying, sextortion, and exploitation" },
+    { icon: "panel", text: "Thematic panel discussions featuring leading experts" },
+    { icon: "exhibition", text: "Presentations of national child protection initiatives" },
+  ],
+  poster: {
+    eyebrow: "1st Africa Child Online Protection Summit 2024",
+    heading: "Where ACOSA began",
+    body: "Delegates from 10 African countries gathered in Addis Ababa to found a shared, regional response to online risks facing children, laying the foundation for the African Child Online Safety Alliance.",
+    images: [
+      { url: "/images/summit/board-meeting.jpg", alt: "ACOSA founding delegates in a working session" },
+      { url: "/images/summit/team-photo.jpg", alt: "ACOSA Summit branded banners at the founding summit" },
+      { url: "/images/summit/large-group-photo.jpg", alt: "Delegates at the founding summit" },
+    ],
+    supportedByLabel: "Organized by the Watoto Watch Network, with thanks to our partner Meta, and in collaboration with",
+    partners: [
+      "Ghana Internet Safety Foundation",
+      "ACSAI",
+      "LifeLine/ChildLine",
+      "Sema",
+      "Sustain Cameroon",
+      "Watoto Watch Network",
+      "Polaris Asso",
+      "Emmanuel Development Association",
+      "Halley Movement",
+    ],
+  },
+  contact: {
+    name: "Executive Secretary, ACOSA",
+    email: "lkariuki@theacosa.com",
+    ccEmail: "eadinkrah@theacosa.com",
+    website: "www.theacosa.com",
+    address: "ACOSA Secretariat, Ngong Hills Business Center, P.O. Box 535-00517, Nairobi, Kenya",
+    phone: "+254 701 077955",
+  },
+  cta: { label: "Get involved", href: "/contact" },
+};

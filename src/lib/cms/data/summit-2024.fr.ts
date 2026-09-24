@@ -1,0 +1,65 @@
+import type { SummitPage } from "../types";
+
+export const summit2024Fr: SummitPage = {
+  heading: "Sommet ACOSA",
+  edition: "1er Sommet africain sur la protection des enfants en ligne 2024",
+  theme: "Fondation de l'Alliance Africaine pour la Sécurité des Enfants en Ligne",
+  dates: "Novembre 2024",
+  location: "Addis-Abeba, Éthiopie",
+  images: [
+    { url: "/images/summit/board-meeting.jpg", alt: "Délégués fondateurs de l'ACOSA en session de travail" },
+    { url: "/images/summit/large-group-photo.jpg", alt: "Délégués au sommet fondateur" },
+  ],
+  about: "Le premier Sommet africain sur la protection des enfants en ligne, organisé par le Watoto Watch Network, a réuni gouvernements, société civile, éducateurs, décideurs politiques et experts technologiques de tout le continent pour évaluer l'état de la protection des enfants en ligne et explorer des solutions collaboratives, donnant naissance à l'Alliance Africaine pour la Sécurité des Enfants en Ligne (ACOSA).",
+  legacyNote: "Le Sommet d'Éthiopie 2024 a réuni des responsables de la protection de l'enfance de 10 pays, avec l'objectif d'élargir la participation à 20 pays africains lors des futures éditions.",
+  objectives: [
+    "Évaluer l'état de la protection des enfants en ligne à travers l'Afrique",
+    "Examiner les initiatives de protection de l'enfance au Kenya, en Namibie, en Tanzanie, au Cameroun, à Maurice, en Afrique du Sud, au Ghana et au Nigeria",
+    "Fonder une alliance régionale coordonnée pour lutter contre le cyberharcèlement, la sextorsion et l'exploitation",
+    "Poser les bases des futures éditions du sommet",
+  ],
+  audience: [
+    "Organisations de protection de l'enfance et ONG",
+    "Entreprises technologiques et de télécommunications",
+    "Décideurs politiques et régulateurs",
+    "Éducateurs et chercheurs",
+    "Défenseurs des droits numériques et chercheurs",
+  ],
+  activities: [
+    { icon: "launch", text: "Fondation de l'Alliance Africaine pour la Sécurité des Enfants en Ligne" },
+    { icon: "roundtable", text: "Tables rondes sur le cyberharcèlement, la sextorsion et l'exploitation" },
+    { icon: "panel", text: "Panels thématiques avec des experts de premier plan" },
+    { icon: "exhibition", text: "Présentations des initiatives nationales de protection de l'enfance" },
+  ],
+  poster: {
+    eyebrow: "1er Sommet africain sur la protection des enfants en ligne 2024",
+    heading: "Là où tout a commencé pour l'ACOSA",
+    body: "Des délégués de 10 pays africains se sont réunis à Addis-Abeba pour fonder une réponse régionale partagée aux risques en ligne pour les enfants, posant les bases de l'Alliance Africaine pour la Sécurité des Enfants en Ligne.",
+    images: [
+      { url: "/images/summit/board-meeting.jpg", alt: "Délégués fondateurs de l'ACOSA en session de travail" },
+      { url: "/images/summit/team-photo.jpg", alt: "Bannières ACOSA exposées lors du sommet" },
+      { url: "/images/summit/large-group-photo.jpg", alt: "Délégués au sommet fondateur" },
+    ],
+    supportedByLabel: "Organisé par le Watoto Watch Network, avec le soutien de notre partenaire Meta, et en collaboration avec",
+    partners: [
+      "Ghana Internet Safety Foundation",
+      "ACSAI",
+      "LifeLine/ChildLine",
+      "Sema",
+      "Sustain Cameroon",
+      "Watoto Watch Network",
+      "Polaris Asso",
+      "Emmanuel Development Association",
+      "Halley Movement",
+    ],
+  },
+  contact: {
+    name: "Secrétaire Exécutive, ACOSA",
+    email: "lkariuki@theacosa.com",
+    ccEmail: "eadinkrah@theacosa.com",
+    website: "www.theacosa.com",
+    address: "Secrétariat de l'ACOSA, Ngong Hills Business Center, B.P. 535-00517, Nairobi, Kenya",
+    phone: "+254 701 077955",
+  },
+  cta: { label: "Impliquez-vous", href: "/contact" },
+};

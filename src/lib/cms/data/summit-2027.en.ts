@@ -1,0 +1,67 @@
+import type { SummitPage } from "../types";
+
+export const summit2027En: SummitPage = {
+  heading: "ACOSA Summit",
+  edition: "3rd Africa Child Online Safety Summit 2027",
+  theme: "AI, Children & the Future of Digital Participation",
+  dates: "17 – 18 February 2027",
+  location: "Dakar, Senegal",
+  images: [
+    { url: "/images/hero/girl-laptop-hero.jpg", alt: "A young African girl using a laptop" },
+    { url: "/images/summit/panel-speaker.jpg", alt: "Speaker addressing delegates at the ACOSA Summit" },
+  ],
+  about: "Africa's leading continental platform bringing together governments, technology companies, civil society, researchers and young people to shape a safer, more inclusive and right-respecting digital future for children, with a focus on the opportunities and risks AI brings to how children learn, play and connect online.",
+  legacyNote: "Building on the momentum of the 2024 founding summit in Addis Ababa and the 2025 Nairobi summit, the 2027 edition convenes in Dakar to confront AI's growing role in children's digital lives.",
+  objectives: [
+    "Examine how AI systems shape children's online experiences, for better and worse",
+    "Showcase policies, tools, and interventions for AI-era child protection",
+    "Strengthen multi-stakeholder collaboration across the continent",
+    "Develop actionable recommendations for safe, rights-respecting AI adoption",
+  ],
+  audience: [
+    "Child Protection Organizations & NGOs",
+    "Technology and AI Companies",
+    "Policymakers and Regulators",
+    "Educators and Researchers",
+    "Digital Rights Advocates and Researchers",
+  ],
+  activities: [
+    { icon: "launch", text: "Launch of AI and child online safety reports and research" },
+    { icon: "roundtable", text: "Roundtable discussions on AI, algorithms, and emerging risks" },
+    { icon: "panel", text: "Thematic panel discussions featuring leading experts" },
+    { icon: "exhibition", text: "Exhibitions of innovative digital safety tools and resources" },
+  ],
+  poster: {
+    eyebrow: "3rd Africa Child Online Safety Summit 2027",
+    heading: "Shaping a safer AI-powered future for Africa's children",
+    body: "Delegates, child-protection leaders, technologists and young people from across Africa gather in Dakar to shape a shared, regional response to the risks and opportunities AI brings to children online.",
+    images: [
+      { url: "/images/summit/registration.jpg", alt: "Delegate registration at an ACOSA Summit" },
+      { url: "/images/summit/team-photo.jpg", alt: "ACOSA Summit branded banners on display" },
+      { url: "/images/summit/banners.jpg", alt: "Panel discussion at an ACOSA summit" },
+    ],
+    supportedByLabel: "Supported by Meta, and in partnership with",
+    partners: [
+      "Ghana Internet Safety Foundation",
+      "ACSAI",
+      "LifeLine/ChildLine",
+      "Sema",
+      "Sustain Cameroon",
+      "Watoto Watch Network",
+      "Polaris Asso",
+      "Emmanuel Development Association",
+      "Halley Movement",
+    ],
+  },
+  contact: {
+    name: "Executive Secretary, ACOSA",
+    email: "lkariuki@theacosa.com",
+    ccEmail: "eadinkrah@theacosa.com",
+    website: "www.theacosa.com",
+    address: "ACOSA Secretariat, Ngong Hills Business Center, P.O. Box 535-00517, Nairobi, Kenya",
+    phone: "+254 701 077955",
+  },
+  cta: { label: "Partner With Us", href: "/contact" },
+  ctaStatic: true,
+  ctaEmail: "partnership@theacosa.com",
+};

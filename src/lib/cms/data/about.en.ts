@@ -1,4 +1,5 @@
 import type { AboutPage } from "../types";
+import { members } from "./members";
 
 export const aboutEn: AboutPage = {
   intro: {
@@ -15,8 +16,9 @@ export const aboutEn: AboutPage = {
   story: {
     heading: "Our Story",
     subheading: "Protecting African children online",
-    body: "The African Child Online Safety Alliance (ACOSA) was born out of a collective vision to create a safer digital environment for children across Africa. As internet access expands across the continent, African children are increasingly engaging with digital spaces, bringing both opportunities for growth and exposure to significant online risks. Our journey began at the Africa Child Online Protection Summit, organized by the Watoto Watch Network in November 2024 in Addis Ababa, Ethiopia. This landmark event brought together stakeholders from across Africa — governments, civil society organizations, educators, policymakers, and technology experts — to assess the state of child online protection and explore collaborative solutions tailored to the continent's diverse contexts. The summit examined child protection initiatives in Kenya, Namibia, Tanzania, Cameroon, Mauritius, South Africa, Ghana, and Nigeria, revealing that coordinated regional action was needed to address cyberbullying, sextortion, and exploitation.",
+    body: "The African Child Online Safety Alliance (ACOSA) was born out of a collective vision to create a safer digital environment for children across Africa. As internet access expands across the continent, African children are increasingly engaging with digital spaces, bringing both opportunities for growth and exposure to significant online risks. Our journey began at the Africa Child Online Protection Summit, organized by the Watoto Watch Network in November 2024 in Addis Ababa, Ethiopia. This landmark event brought together stakeholders from across Africa (governments, civil society organizations, educators, policymakers, and technology experts) to assess the state of child online protection and explore collaborative solutions tailored to the continent's diverse contexts. The summit examined child protection initiatives in Kenya, Namibia, Tanzania, Cameroon, Mauritius, South Africa, Ghana, and Nigeria, revealing that coordinated regional action was needed to address cyberbullying, sextortion, and exploitation.",
     memberCountries: ["Kenya", "Namibia", "Tanzania", "Cameroon", "Mauritius", "Ghana", "South Africa", "Senegal", "Ethiopia", "Nigeria"],
+    members,
     pillars: [
       { icon: "partnership", title: "Strength in Partnership", text: "Strengthening regional collaboration to combat online risks and promote digital literacy." },
       { icon: "advocacy", title: "Advocating", text: "Advocating for robust child online protection policies across Africa." },

@@ -19,6 +19,10 @@ import { whatWeDoEn } from "./data/what-we-do.en";
 import { whatWeDoFr } from "./data/what-we-do.fr";
 import { summitEn } from "./data/summit.en";
 import { summitFr } from "./data/summit.fr";
+import { summit2027En } from "./data/summit-2027.en";
+import { summit2027Fr } from "./data/summit-2027.fr";
+import { summit2024En } from "./data/summit-2024.en";
+import { summit2024Fr } from "./data/summit-2024.fr";
 import { contactEn } from "./data/contact.en";
 import { contactFr } from "./data/contact.fr";
 
@@ -89,10 +93,23 @@ export async function getWhatWeDoPage(locale: AppLocale): Promise<WhatWeDoPage> 
 }
 
 export async function getSummitPage(locale: AppLocale): Promise<SummitPage> {
+  return getSummitEdition(locale, "2027");
+}
+
+const SUMMIT_EDITIONS = {
+  "2027": { en: summit2027En, fr: summit2027Fr },
+  "2025": { en: summitEn, fr: summitFr },
+  "2024": { en: summit2024En, fr: summit2024Fr },
+} as const;
+
+export type SummitYear = keyof typeof SUMMIT_EDITIONS;
+
+export async function getSummitEdition(locale: AppLocale, year: SummitYear): Promise<SummitPage> {
   if (USE_WORDPRESS) {
-    return wpFetch<SummitPage>("/wp-json/theacosa/v1/page/acosa-summit", locale);
+    return wpFetch<SummitPage>(`/wp-json/theacosa/v1/page/acosa-summit-${year}`, locale);
   }
-  return locale === "fr" ? summitFr : summitEn;
+  const edition = SUMMIT_EDITIONS[year];
+  return locale === "fr" ? edition.fr : edition.en;
 }
 
 export async function getContactPage(locale: AppLocale): Promise<ContactPage> {

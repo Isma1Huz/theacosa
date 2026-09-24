@@ -19,11 +19,10 @@ export function SectionHeading({
       {eyebrow && (
         <span
           className={clsx(
-            "inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em]",
+            "inline-block text-xs font-bold uppercase tracking-[0.2em]",
             light ? "text-[var(--color-gold)]" : "text-[var(--color-gold-dark)]"
           )}
         >
-          <span className="h-px w-6 bg-current" />
           {eyebrow}
         </span>
       )}

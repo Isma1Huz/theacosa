@@ -60,7 +60,45 @@ export function Header({
 
         <nav className="hidden lg:flex items-center gap-8">
           {settings.primaryNav.map((item) => {
-            const active = pathname === item.href;
+            const active = pathname === item.href || (item.children?.some((c) => c.href === pathname) ?? false);
+            if (item.children && item.children.length > 0) {
+              return (
+                <div key={item.href} className="relative group">
+                  <Link
+                    href={item.href}
+                    className={clsx(
+                      "flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide transition-colors",
+                      active
+                        ? "text-[var(--color-gold-dark)]"
+                        : "text-[var(--color-navy)] hover:text-[var(--color-gold-dark)]"
+                    )}
+                  >
+                    {item.label}
+                    <svg viewBox="0 0 12 8" className="w-2.5 h-2.5 fill-current" aria-hidden="true">
+                      <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </Link>
+                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 focus-within:visible focus-within:opacity-100 transition-opacity absolute left-0 top-full pt-3 z-50">
+                    <div className="min-w-[11rem] rounded-xl bg-white shadow-xl border border-black/5 py-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className={clsx(
+                            "block px-4 py-2 text-sm font-medium transition-colors",
+                            pathname === child.href
+                              ? "text-[var(--color-gold-dark)] bg-[var(--color-cream)]"
+                              : "text-[var(--color-navy)] hover:bg-[var(--color-cream)]"
+                          )}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
             return (
               <Link
                 key={item.href}
@@ -121,13 +159,27 @@ export function Header({
       >
         <Container className="flex flex-col gap-1 py-4">
           {settings.primaryNav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="py-2.5 text-base font-semibold text-[var(--color-navy)] border-b border-black/5 last:border-none"
-            >
-              {item.label}
-            </Link>
+            <div key={item.href} className="border-b border-black/5 last:border-none">
+              <Link
+                href={item.href}
+                className="block py-2.5 text-base font-semibold text-[var(--color-navy)]"
+              >
+                {item.label}
+              </Link>
+              {item.children && item.children.length > 0 && (
+                <div className="flex flex-col gap-0.5 pb-2.5 pl-4">
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      className="py-1.5 text-sm font-medium text-[var(--color-muted)] hover:text-[var(--color-gold-dark)]"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           <div className="flex items-center justify-between pt-4">
             <LanguageSwitcher className="text-[var(--color-navy)]" />

@@ -59,6 +59,12 @@ export interface SiteSettings {
   };
 }
 
+export interface Member {
+  name: string;
+  country: string;
+  logo: WPImage;
+}
+
 export interface Pillar {
   icon: string; // icon key or WPImage URL
   title: string;
@@ -88,8 +94,18 @@ export interface HeroSlide {
   subheading: string;
   body: string;
   image: WPImage;
-  cta: LinkField;
+  /** Primary CTA. Optional — a slide can lead with just `secondaryCta`
+   *  (rendered as the primary gold button in that case). */
+  cta?: LinkField;
   secondaryCta?: LinkField;
+  /** When true, `cta` renders as a static (non-clickable) button that
+   *  keeps its pill design — used for the "Partner With Us" slide, which
+   *  shows a contact email instead of linking anywhere. */
+  ctaStatic?: boolean;
+  /** Email line shown inside the static cta button, under the label. */
+  ctaEmail?: string;
+  /** When true, the slide renders as image-only — no text/CTA overlay. */
+  imageOnly?: boolean;
   /** Optional accent text appended after `heading` in gold, e.g. a year. */
   headingHighlight?: string;
   /** Optional subtitle line rendered directly under the heading (larger
@@ -129,6 +145,8 @@ export interface HomePage {
     /** Image shown alongside the "Read more" CTA on the homepage Champions
      *  of Child Safety section. */
     image?: WPImage;
+    /** Member organizations shown as a logo + country grid. */
+    members?: Member[];
   };
   whyAcosa: {
     body: string;
@@ -191,6 +209,7 @@ export interface AboutPage {
     subheading: string;
     body: string;
     memberCountries: string[];
+    members?: Member[];
     pillars: Pillar[];
     cta: LinkField;
     /** Image shown on the right of the Our Story section. */
@@ -259,6 +278,14 @@ export interface SummitPage {
     phone: string;
   };
   cta: LinkField;
+  /** When true, `cta` renders everywhere on this summit's page as a static
+   *  (non-clickable) button showing `ctaEmail` instead of linking anywhere
+   *  — matches the disabled "Partner With Us" hero-slide treatment, used
+   *  while partnership enquiries for this (upcoming) edition aren't open
+   *  yet. */
+  ctaStatic?: boolean;
+  /** Email line shown inside the static cta button, under the label. */
+  ctaEmail?: string;
 }
 
 /** Contact page */

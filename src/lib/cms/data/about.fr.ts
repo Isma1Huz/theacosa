@@ -1,4 +1,5 @@
 import type { AboutPage } from "../types";
+import { members } from "./members";
 
 export const aboutFr: AboutPage = {
   intro: {
@@ -15,8 +16,9 @@ export const aboutFr: AboutPage = {
   story: {
     heading: "Notre histoire",
     subheading: "Protéger les enfants africains en ligne",
-    body: "L'Alliance Africaine pour la Sécurité des Enfants en Ligne (ACOSA) est née d'une vision collective visant à créer un environnement numérique plus sûr pour les enfants à travers l'Afrique. À mesure que l'accès à Internet se développe sur le continent, les enfants africains s'engagent de plus en plus dans les espaces numériques, ce qui apporte à la fois des opportunités de croissance et une exposition à des risques en ligne importants. Notre parcours a débuté lors du Sommet africain sur la protection des enfants en ligne, organisé par le Watoto Watch Network en novembre 2024 à Addis-Abeba, en Éthiopie. Cet événement marquant a réuni des acteurs de toute l'Afrique — gouvernements, organisations de la société civile, éducateurs, décideurs politiques et experts technologiques — pour évaluer l'état de la protection des enfants en ligne et explorer des solutions collaboratives adaptées aux contextes variés du continent. Le sommet a examiné les initiatives de protection de l'enfance au Kenya, en Namibie, en Tanzanie, au Cameroun, à Maurice, en Afrique du Sud, au Ghana et au Nigeria, révélant la nécessité d'une action régionale coordonnée pour lutter contre le cyberharcèlement, la sextorsion et l'exploitation.",
+    body: "L'Alliance Africaine pour la Sécurité des Enfants en Ligne (ACOSA) est née d'une vision collective visant à créer un environnement numérique plus sûr pour les enfants à travers l'Afrique. À mesure que l'accès à Internet se développe sur le continent, les enfants africains s'engagent de plus en plus dans les espaces numériques, ce qui apporte à la fois des opportunités de croissance et une exposition à des risques en ligne importants. Notre parcours a débuté lors du Sommet africain sur la protection des enfants en ligne, organisé par le Watoto Watch Network en novembre 2024 à Addis-Abeba, en Éthiopie. Cet événement marquant a réuni des acteurs de toute l'Afrique (gouvernements, organisations de la société civile, éducateurs, décideurs politiques et experts technologiques) pour évaluer l'état de la protection des enfants en ligne et explorer des solutions collaboratives adaptées aux contextes variés du continent. Le sommet a examiné les initiatives de protection de l'enfance au Kenya, en Namibie, en Tanzanie, au Cameroun, à Maurice, en Afrique du Sud, au Ghana et au Nigeria, révélant la nécessité d'une action régionale coordonnée pour lutter contre le cyberharcèlement, la sextorsion et l'exploitation.",
     memberCountries: ["Kenya", "Namibie", "Tanzanie", "Cameroun", "Maurice", "Ghana", "Afrique du Sud", "Sénégal", "Éthiopie", "Nigeria"],
+    members,
     pillars: [
       { icon: "partnership", title: "La force du partenariat", text: "Renforcer la collaboration régionale pour lutter contre les risques en ligne et promouvoir la littératie numérique." },
       { icon: "advocacy", title: "Plaidoyer", text: "Plaider pour des politiques solides de protection des enfants en ligne à travers l'Afrique." },

@@ -7,10 +7,10 @@ export const summitEn: SummitPage = {
   dates: "19–20 November 2025",
   location: "Nairobi, Kenya",
   images: [
-    { url: "https://theacosa.com/wp-content/uploads/2025/11/ACOSA-819x1024.jpg", alt: "Africa Child Online Safety Summit" },
-    { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Delegates at a previous ACOSA summit" },
+    { url: "/images/summit/large-group-photo.jpg", alt: "Delegates at the 2nd Africa Child Online Safety Summit" },
+    { url: "/images/summit/panel-speaker.jpg", alt: "Speaker addressing delegates at the ACOSA Summit" },
   ],
-  about: "As internet access expands across Africa, children and young people are more connected than ever — unlocking new opportunities, but also exposing them to cyberbullying, exploitation, privacy risks, and harmful content.",
+  about: "As internet access expands across Africa, children and young people are more connected than ever, unlocking new opportunities, but also exposing them to cyberbullying, exploitation, privacy risks, and harmful content.",
   legacyNote: "The inaugural 2024 Ethiopia Summit united child protection leaders from 10 countries, with a goal of expanding participation to 20 African nations by future editions.",
   objectives: [
     "Assess progress made since the inaugural summit",
@@ -36,11 +36,11 @@ export const summitEn: SummitPage = {
     heading: "A continental movement for safer children online",
     body: "Delegates, child-protection leaders, and technology partners from across Africa came together in Nairobi to shape a shared, regional response to online risks facing children.",
     images: [
-      { url: "https://theacosa.com/wp-content/uploads/2025/11/ACOSA-819x1024.jpg", alt: "ACOSA Summit delegate" },
-      { url: "https://theacosa.com/wp-content/uploads/2025/01/A01A1395-scaled.jpg", alt: "ACOSA team at the founding summit" },
-      { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Delegates at a previous ACOSA summit" },
+      { url: "/images/summit/registration.jpg", alt: "Delegate registration at the ACOSA Summit" },
+      { url: "/images/summit/team-photo.jpg", alt: "ACOSA Summit branded banners on display" },
+      { url: "/images/summit/panel-speaker.jpg", alt: "Speaker addressing delegates at the ACOSA Summit" },
     ],
-    supportedByLabel: "Supported by Meta, and in partnership with",
+    supportedByLabel: "Supported by our partners Meta and Amnesty International Kenya, and in collaboration with",
     partners: [
       "Ghana Internet Safety Foundation",
       "ACSAI",

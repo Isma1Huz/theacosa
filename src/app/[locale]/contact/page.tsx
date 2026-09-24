@@ -5,6 +5,7 @@ import { Icon } from "@/components/ui/icon";
 import { Reveal } from "@/components/motion/reveal";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/sections/contact-form";
+import { AfricanBlobAccent } from "@/components/ui/african-pattern";
 
 export async function generateMetadata() {
   return { title: "Contact" };
@@ -14,27 +15,20 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const { locale } = await params;
   const contact = await getContactPage(locale as AppLocale);
 
-  const mapSrc = `https://www.google.com/maps?q=${contact.map.lat},${contact.map.lng}&z=${contact.map.zoom}&output=embed`;
-
   return (
     <>
-      <PageHero eyebrow={contact.heading} title={contact.subheading} subtitle={contact.intro} />
+      <PageHero
+        eyebrow={contact.heading}
+        title={contact.subheading}
+        subtitle={contact.intro}
+        image={{ url: "/images/summit/registration-desk.jpg", alt: "ACOSA event registration" }}
+      />
 
-      <section className="section-y bg-white">
-        <Container className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+      <section className="section-y bg-white relative overflow-hidden">
+        <AfricanBlobAccent className="absolute -right-16 -bottom-16 w-64 h-64 pointer-events-none" />
+        <Container className="relative grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
             <Reveal className="flex items-start gap-4 rounded-2xl bg-[var(--color-cream)] p-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--color-navy)] text-[var(--color-gold)]">
-                <Icon name="phone" className="w-5 h-5" />
-              </span>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-muted)]">{contact.methods.callLabel}</p>
-                <a href={`tel:${contact.methods.phone.replace(/\s+/g, "")}`} className="font-semibold text-[var(--color-navy)]">
-                  {contact.methods.phone}
-                </a>
-              </div>
-            </Reveal>
-            <Reveal delay={0.08} className="flex items-start gap-4 rounded-2xl bg-[var(--color-cream)] p-5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--color-navy)] text-[var(--color-gold)]">
                 <Icon name="mail" className="w-5 h-5" />
               </span>
@@ -53,16 +47,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-muted)]">{contact.methods.addressLabel}</p>
                 <p className="font-semibold text-[var(--color-navy)]">{contact.methods.address}</p>
               </div>
-            </Reveal>
-
-            <Reveal delay={0.24} className="overflow-hidden rounded-2xl border border-black/5 aspect-[4/3]">
-              <iframe
-                title={contact.map.label}
-                src={mapSrc}
-                className="h-full w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
             </Reveal>
           </div>
 

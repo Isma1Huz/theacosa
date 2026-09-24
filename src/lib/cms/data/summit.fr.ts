@@ -10,7 +10,7 @@ export const summitFr: SummitPage = {
     { url: "https://theacosa.com/wp-content/uploads/2025/11/ACOSA-819x1024.jpg", alt: "Sommet africain sur la sécurité des enfants en ligne" },
     { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Délégués lors d'un précédent sommet de l'ACOSA" },
   ],
-  about: "À mesure que l'accès à Internet se développe à travers l'Afrique, les enfants et les jeunes sont plus connectés que jamais — ouvrant de nouvelles opportunités, mais les exposant aussi au cyberharcèlement, à l'exploitation, aux risques pour la vie privée et aux contenus nuisibles.",
+  about: "À mesure que l'accès à Internet se développe à travers l'Afrique, les enfants et les jeunes sont plus connectés que jamais, ouvrant de nouvelles opportunités, mais les exposant aussi au cyberharcèlement, à l'exploitation, aux risques pour la vie privée et aux contenus nuisibles.",
   legacyNote: "Le premier sommet, tenu en Éthiopie en 2024, a réuni des responsables de la protection de l'enfance de 10 pays, avec l'objectif d'étendre la participation à 20 pays africains lors des prochaines éditions.",
   objectives: [
     "Évaluer les progrès réalisés depuis le premier sommet",
@@ -40,7 +40,7 @@ export const summitFr: SummitPage = {
       { url: "https://theacosa.com/wp-content/uploads/2025/01/A01A1395-scaled.jpg", alt: "L'équipe ACOSA lors du sommet fondateur" },
       { url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg", alt: "Délégués lors d'un précédent sommet de l'ACOSA" },
     ],
-    supportedByLabel: "Soutenu par Meta, et en partenariat avec",
+    supportedByLabel: "Soutenu par nos partenaires Meta et Amnesty International Kenya, et en collaboration avec",
     partners: [
       "Ghana Internet Safety Foundation",
       "ACSAI",

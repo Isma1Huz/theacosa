@@ -66,15 +66,21 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
             priority={index === 0}
             className="object-cover object-center"
           />
-          {/* Navy on the left fading to clear over the image on the right */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(90deg, var(--color-navy) 0%, var(--color-navy) 28%, rgba(11,35,64,0.88) 45%, rgba(11,35,64,0.35) 65%, rgba(11,35,64,0.05) 85%)",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy)]/50 via-transparent to-transparent" />
+          {/* Navy on the left fading to clear over the image on the right —
+              skipped entirely for an image-only slide, which has no text
+              needing a legibility gradient and should read as a clean photo. */}
+          {!slide.imageOnly && (
+            <>
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(90deg, var(--color-navy) 0%, var(--color-navy) 28%, rgba(11,35,64,0.88) 45%, rgba(11,35,64,0.35) 65%, rgba(11,35,64,0.05) 85%)",
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy)]/50 via-transparent to-transparent" />
+            </>
+          )}
         </motion.div>
       </AnimatePresence>
 
@@ -87,6 +93,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
         aria-hidden="true"
       />
 
+      {!slide.imageOnly && (
       <div className="relative w-full mx-auto px-5 sm:px-8 lg:px-10" style={{ maxWidth: "var(--max-width)" }}>
         <div className="max-w-xl py-16 sm:py-0">
           <AnimatePresence mode="wait">
@@ -129,29 +136,49 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
               )}
               <p className="mt-5 text-white/80 leading-relaxed">{slide.body}</p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  href={slide.cta.href}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-gold)] px-6 py-3 text-sm font-semibold text-[var(--color-navy)] transition-colors hover:bg-[var(--color-gold-dark)]"
-                >
-                  {slide.cta.label}
-                </Link>
+                {slide.cta && (
+                  slide.ctaStatic ? (
+                    <div
+                      role="note"
+                      aria-label={`${slide.cta.label}${slide.ctaEmail ? `: ${slide.ctaEmail}` : ""}`}
+                      className="inline-flex flex-col items-start justify-center gap-0.5 rounded-2xl bg-[var(--color-gold)] px-6 py-3 text-[var(--color-navy)] cursor-default select-text"
+                    >
+                      <span className="text-sm font-semibold leading-tight">{slide.cta.label}</span>
+                      {slide.ctaEmail && (
+                        <span className="text-xs font-medium leading-tight text-[var(--color-navy)]/80">{slide.ctaEmail}</span>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={slide.cta.href}
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-gold)] px-6 py-3 text-sm font-semibold text-[var(--color-navy)] transition-colors hover:bg-[var(--color-gold-dark)]"
+                    >
+                      {slide.cta.label}
+                    </Link>
+                  )
+                )}
                 {slide.secondaryCta && (
                   <Link
                     href={slide.secondaryCta.href}
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[var(--color-navy)]"
+                    className={clsx(
+                      "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors",
+                      slide.cta
+                        ? "border border-white/70 text-white hover:bg-white hover:text-[var(--color-navy)]"
+                        : "bg-[var(--color-gold)] text-[var(--color-navy)] hover:bg-[var(--color-gold-dark)]"
+                    )}
                   >
                     {slide.secondaryCta.label}
                   </Link>
                 )}
               </div>
               {slide.partnersBadge ? (
-                <div className="relative mt-6 h-20 sm:h-24 w-[440px] sm:w-[520px]">
+                <div className="relative mt-6 inline-flex h-16 sm:h-[4.5rem] w-[210px] sm:w-[240px] items-center rounded-2xl bg-white px-4 py-2 shadow-lg">
                   <Image
                     src={slide.partnersBadge.url}
                     alt={slide.partnersBadge.alt}
                     fill
-                    sizes="520px"
-                    className="object-contain object-left drop-shadow-lg"
+                    sizes="240px"
+                    className="object-contain p-2"
                   />
                 </div>
               ) : (
@@ -165,6 +192,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
           </AnimatePresence>
         </div>
       </div>
+      )}
 
       {/* Slider controls */}
       {slides.length > 1 && (

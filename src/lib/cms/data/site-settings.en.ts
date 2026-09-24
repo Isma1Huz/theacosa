@@ -3,14 +3,14 @@ import type { SiteSettings } from "../types";
 // Seed data shaped exactly like the ACF Options Page response documented in
 // /docs/wordpress-editing-guide.md. Replace with a live WP fetch later.
 export const siteSettingsEn: SiteSettings = {
-  siteName: "ACOSA — African Child Online Safety Alliance",
+  siteName: "ACOSA: African Child Online Safety Alliance",
   logo: {
     url: "https://theacosa.com/wp-content/uploads/2025/01/ACOSA-logo-1-4-1.png",
     alt: "ACOSA logo",
   },
   logoFooter: {
     url: "/images/brand/acosa-logo-footer-white.png",
-    alt: "ACOSA — Africa Child Online Safety Alliance logo",
+    alt: "ACOSA: Africa Child Online Safety Alliance logo",
   },
   phone: "+254 701 077955",
   email: "info@theacosa.com",
@@ -24,7 +24,15 @@ export const siteSettingsEn: SiteSettings = {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
     { label: "What We Do", href: "/what-we-do" },
-    { label: "ACOSA Summit", href: "/acosa-summit" },
+    {
+      label: "ACOSA Summit",
+      href: "/acosa-summit",
+      children: [
+        { label: "2027 Summit", href: "/acosa-summit" },
+        { label: "2025 Summit", href: "/acosa-summit/2025" },
+        { label: "2024 Summit", href: "/acosa-summit/2024" },
+      ],
+    },
     { label: "Contact", href: "/contact" },
   ],
   footer: {

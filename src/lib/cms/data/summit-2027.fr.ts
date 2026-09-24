@@ -1,0 +1,67 @@
+import type { SummitPage } from "../types";
+
+export const summit2027Fr: SummitPage = {
+  heading: "Sommet ACOSA",
+  edition: "3ᵉ Sommet africain sur la sécurité des enfants en ligne 2027",
+  theme: "L'IA, les enfants et l'avenir de la participation numérique",
+  dates: "17 – 18 février 2027",
+  location: "Dakar, Sénégal",
+  images: [
+    { url: "/images/hero/girl-laptop-hero.jpg", alt: "Une jeune fille africaine utilisant un ordinateur portable" },
+    { url: "/images/summit/panel-speaker.jpg", alt: "Intervenant s'adressant aux délégués du Sommet ACOSA" },
+  ],
+  about: "La principale plateforme continentale d'Afrique réunissant gouvernements, entreprises technologiques, société civile, chercheurs et jeunes pour bâtir un avenir numérique plus sûr, plus inclusif et plus respectueux des droits des enfants, avec un accent sur les opportunités et les risques que l'IA apporte à la façon dont les enfants apprennent, jouent et se connectent en ligne.",
+  legacyNote: "S'appuyant sur l'élan du sommet fondateur de 2024 à Addis-Abeba et du sommet de Nairobi de 2025, l'édition 2027 se tient à Dakar pour aborder le rôle croissant de l'IA dans la vie numérique des enfants.",
+  objectives: [
+    "Examiner comment les systèmes d'IA façonnent les expériences en ligne des enfants",
+    "Présenter des politiques, outils et interventions pour la protection des enfants à l'ère de l'IA",
+    "Renforcer la collaboration multipartite à travers le continent",
+    "Élaborer des recommandations concrètes pour une adoption sûre et respectueuse des droits",
+  ],
+  audience: [
+    "Organisations de protection de l'enfance et ONG",
+    "Entreprises technologiques et d'IA",
+    "Décideurs politiques et régulateurs",
+    "Éducateurs et chercheurs",
+    "Défenseurs des droits numériques et chercheurs",
+  ],
+  activities: [
+    { icon: "launch", text: "Lancement de rapports et recherches sur l'IA et la sécurité des enfants en ligne" },
+    { icon: "roundtable", text: "Tables rondes sur l'IA, les algorithmes et les risques émergents" },
+    { icon: "panel", text: "Panels thématiques avec des experts de premier plan" },
+    { icon: "exhibition", text: "Expositions d'outils et de ressources innovants pour la sécurité numérique" },
+  ],
+  poster: {
+    eyebrow: "3ᵉ Sommet africain sur la sécurité des enfants en ligne 2027",
+    heading: "Façonner un avenir plus sûr propulsé par l'IA pour les enfants d'Afrique",
+    body: "Délégués, responsables de la protection de l'enfance, technologues et jeunes de toute l'Afrique se réunissent à Dakar pour bâtir une réponse régionale partagée aux risques et opportunités que l'IA apporte aux enfants en ligne.",
+    images: [
+      { url: "/images/summit/registration.jpg", alt: "Enregistrement des délégués à un Sommet ACOSA" },
+      { url: "/images/summit/team-photo.jpg", alt: "Bannières ACOSA exposées lors d'un sommet" },
+      { url: "/images/summit/banners.jpg", alt: "Panel de discussion lors d'un sommet ACOSA" },
+    ],
+    supportedByLabel: "Soutenu par Meta, en partenariat avec",
+    partners: [
+      "Ghana Internet Safety Foundation",
+      "ACSAI",
+      "LifeLine/ChildLine",
+      "Sema",
+      "Sustain Cameroon",
+      "Watoto Watch Network",
+      "Polaris Asso",
+      "Emmanuel Development Association",
+      "Halley Movement",
+    ],
+  },
+  contact: {
+    name: "Secrétaire Exécutive, ACOSA",
+    email: "lkariuki@theacosa.com",
+    ccEmail: "eadinkrah@theacosa.com",
+    website: "www.theacosa.com",
+    address: "Secrétariat de l'ACOSA, Ngong Hills Business Center, B.P. 535-00517, Nairobi, Kenya",
+    phone: "+254 701 077955",
+  },
+  cta: { label: "Devenir partenaire", href: "/contact" },
+  ctaStatic: true,
+  ctaEmail: "partnership@theacosa.com",
+};

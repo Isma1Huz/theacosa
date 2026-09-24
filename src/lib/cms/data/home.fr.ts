@@ -1,4 +1,5 @@
 import type { HomePage } from "../types";
+import { members } from "./members";
 
 export const homeFr: HomePage = {
   hero: {
@@ -15,10 +16,12 @@ export const homeFr: HomePage = {
           url: "/images/hero/girl-laptop-hero.jpg",
           alt: "Une jeune fille africaine souriante utilisant un ordinateur portable, avec le graphique en forme d'Afrique « African Solutions for Africa's Children » de l'ACOSA",
         },
-        cta: { label: "Devenir partenaire", href: "/contact" },
+        cta: { label: "Devenir partenaire", href: "#" },
+        ctaStatic: true,
+        ctaEmail: "partnership@theacosa.com",
         partnersBadge: {
-          url: "/images/hero/organizer-host-badge.png",
-          alt: "Organisé par ACOSA, accueilli par Polaris Asso",
+          url: "https://theacosa.com/wp-content/uploads/2025/01/ACOSA-logo-1-4-1.png",
+          alt: "Logo ACOSA",
         },
       },
       {
@@ -29,25 +32,23 @@ export const homeFr: HomePage = {
           url: "https://theacosa.com/wp-content/uploads/2025/01/A01A1395-scaled.jpg",
           alt: "Membres de l'ACOSA lors du sommet fondateur",
         },
-        cta: { label: "Contactez-nous", href: "/contact" },
         secondaryCta: { label: "Notre histoire", href: "/about-us" },
       },
       {
         heading: "2ᵉ Sommet africain sur la sécurité des enfants en ligne",
-        subheading: "19–20 novembre 2025 · Nairobi, Kenya",
-        body: "Autonomiser la génération numérique africaine : donner la priorité à la sécurité des enfants en ligne. Rejoignez gouvernements, technologues et responsables de la protection de l'enfance de tout le continent.",
+        subheading: "",
+        body: "",
         image: {
           url: "https://theacosa.com/wp-content/uploads/2025/08/AdobeStock_613510779-1024x682.jpeg",
           alt: "Délégués lors d'un précédent sommet de l'ACOSA",
         },
-        cta: { label: "Impliquez-vous", href: "/acosa-summit" },
-        secondaryCta: { label: "Contactez-nous", href: "/contact" },
+        imageOnly: true,
       },
     ],
   },
   execSecretary: {
     heading: "Message de la Secrétaire Exécutive",
-    body: "Au nom de l'Alliance Africaine pour la Sécurité des Enfants en Ligne (ACOSA), je suis heureuse de vous accueillir sur notre plateforme — un pôle de collaboration, de plaidoyer et d'innovation dédié à la protection du bien-être numérique des enfants à travers l'Afrique. Dans un monde numérique en constante évolution, les enfants naviguent aujourd'hui entre opportunités et risques comme jamais auparavant. À l'ACOSA, nous croyons que chaque enfant africain mérite de pouvoir explorer l'espace numérique en toute sécurité et en toute confiance. Cette mission nous unit en tant que collectif d'organisations partageant les mêmes valeurs à travers le continent, œuvrant ensemble pour doter les enfants, les familles et les communautés des outils, des connaissances et des protections nécessaires pour s'épanouir en ligne.",
+    body: "Au nom de l'Alliance Africaine pour la Sécurité des Enfants en Ligne (ACOSA), je suis heureuse de vous accueillir sur notre plateforme, un pôle de collaboration, de plaidoyer et d'innovation dédié à la protection du bien-être numérique des enfants à travers l'Afrique. Dans un monde numérique en constante évolution, les enfants naviguent aujourd'hui entre opportunités et risques comme jamais auparavant. À l'ACOSA, nous croyons que chaque enfant africain mérite de pouvoir explorer l'espace numérique en toute sécurité et en toute confiance. Cette mission nous unit en tant que collectif d'organisations partageant les mêmes valeurs à travers le continent, œuvrant ensemble pour doter les enfants, les familles et les communautés des outils, des connaissances et des protections nécessaires pour s'épanouir en ligne.",
     establishedLabel: "Fondée en novembre 2024",
     images: [
       {
@@ -70,10 +71,11 @@ export const homeFr: HomePage = {
       { icon: "education", title: "Éducation", text: "Grâce à des formations, des ressources et des campagnes de sensibilisation, nous aidons parents, éducateurs et enfants à naviguer en toute sécurité dans le monde numérique." },
       { icon: "research", title: "Recherche & Innovation", text: "L'ACOSA mène des recherches pour répondre aux défis émergents et développe des outils pour des environnements numériques plus sûrs pour les enfants." },
     ],
+    members,
   },
   whyAcosa: {
     body: "Avec plus de 60 % de la population africaine âgée de moins de 25 ans, l'espace numérique façonne de plus en plus la vie des enfants et des jeunes. Or, les lacunes en matière de littératie numérique, de politiques de protection et de sensibilisation exposent de nombreux enfants aux risques en ligne. L'ACOSA a été fondée pour combler ces lacunes et créer une plateforme unifiée pour un avenir numérique sûr pour tous les enfants africains.",
-    ctaText: "Rejoignez-nous dans notre mission de protéger l'avenir numérique de l'Afrique — un enfant à la fois.",
+    ctaText: "Rejoignez-nous dans notre mission de protéger l'avenir numérique de l'Afrique, un enfant à la fois.",
   },
   aboutTeaser: {
     heading: "À propos de l'ACOSA",

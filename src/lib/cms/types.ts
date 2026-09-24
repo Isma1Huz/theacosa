@@ -116,11 +116,18 @@ export interface HeroSlide {
   dateLabel?: string;
   locationLabel?: string;
   /** Optional "Organized by X · Hosted by Y" pill shown near the CTA.
-   *  Text fallback, used only if `partnersBadge` isn't set. */
+   *  Text fallback, used only if neither `organizedBy`/`hostedBy` nor
+   *  `partnersBadge` is set. */
   partnersLine?: string;
-  /** Optional organizer/host logo badge image, shown instead of
-   *  `partnersLine` when present. */
+  /** Optional organizer/host logo badge image (a single flattened graphic),
+   *  shown only if `organizedBy`/`hostedBy` aren't set. */
   partnersBadge?: WPImage;
+  /** "Organized by:" label + logo, shown in a white pill alongside
+   *  `hostedBy` — real text plus real partner logos, rather than one
+   *  baked-together image like `partnersBadge`. */
+  organizedBy?: { label: string; logo: WPImage };
+  /** "Hosted by:" label + logo, shown in the same pill as `organizedBy`. */
+  hostedBy?: { label: string; logo: WPImage };
 }
 
 /** Home page — ACF Flexible Content field group "home_sections" */

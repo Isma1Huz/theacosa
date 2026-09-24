@@ -171,7 +171,45 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
                   </Link>
                 )}
               </div>
-              {slide.partnersBadge ? (
+              {slide.organizedBy || slide.hostedBy ? (
+                <div className="mt-6 inline-flex items-center gap-4 sm:gap-6 rounded-full bg-white px-6 sm:px-8 py-2.5 sm:py-3 shadow-lg">
+                  {slide.organizedBy && (
+                    <div className="flex items-center gap-3">
+                      <span className="text-sm sm:text-base font-bold text-[var(--color-navy)] whitespace-nowrap">
+                        {slide.organizedBy.label}
+                      </span>
+                      <span className="relative h-12 w-20 sm:h-14 sm:w-24 shrink-0">
+                        <Image
+                          src={slide.organizedBy.logo.url}
+                          alt={slide.organizedBy.logo.alt}
+                          fill
+                          sizes="96px"
+                          className="object-contain"
+                        />
+                      </span>
+                    </div>
+                  )}
+                  {slide.organizedBy && slide.hostedBy && (
+                    <span className="h-7 sm:h-9 w-px shrink-0 bg-black/15" aria-hidden="true" />
+                  )}
+                  {slide.hostedBy && (
+                    <div className="flex items-center gap-3">
+                      <span className="text-sm sm:text-base font-bold text-[var(--color-navy)] whitespace-nowrap">
+                        {slide.hostedBy.label}
+                      </span>
+                      <span className="relative h-9 w-24 sm:h-11 sm:w-28 shrink-0">
+                        <Image
+                          src={slide.hostedBy.logo.url}
+                          alt={slide.hostedBy.logo.alt}
+                          fill
+                          sizes="112px"
+                          className="object-contain"
+                        />
+                      </span>
+                    </div>
+                  )}
+                </div>
+              ) : slide.partnersBadge ? (
                 <div className="relative mt-6 inline-flex h-16 sm:h-[4.5rem] w-[210px] sm:w-[240px] items-center rounded-2xl bg-white px-4 py-2 shadow-lg">
                   <Image
                     src={slide.partnersBadge.url}

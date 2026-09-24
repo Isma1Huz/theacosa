@@ -19,9 +19,16 @@ export const homeEn: HomePage = {
         cta: { label: "Partner With Us", href: "#" },
         ctaStatic: true,
         ctaEmail: "partnership@theacosa.com",
-        partnersBadge: {
-          url: "https://theacosa.com/wp-content/uploads/2025/01/ACOSA-logo-1-4-1.png",
-          alt: "ACOSA logo",
+        organizedBy: {
+          label: "Organized by:",
+          logo: {
+            url: "https://theacosa.com/wp-content/uploads/2025/01/ACOSA-logo-1-4-1.png",
+            alt: "ACOSA logo",
+          },
+        },
+        hostedBy: {
+          label: "Hosted by:",
+          logo: { url: "/images/brand/polaris-logo.png", alt: "Polaris Asso logo" },
         },
       },
       {
